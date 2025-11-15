@@ -1,0 +1,243 @@
+/* *** সমাধান: এই অংশটি যোগ করা হয়েছে *** */
+* {
+    box-sizing: border-box;
+}
+/* === সমাধান শেষ === */
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main.claim-container {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    width: 100%; /* নিশ্চিত করুন main কন্টেইনার পুরো প্রস্থ নিচ্ছে */
+}
+
+/* Footer */
+.page-footer {
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    color: #888;
+}
+
+/* সিস্টেম মেসেজ (Loading/Error) */
+.system-message {
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+    color: #666;
+}
+
+/* Red Packet Card (আপডেটেড) */
+.red-packet-card {
+    background-color: #FF0000; 
+    color: #FFFFFF;
+    border-radius: 20px;
+    width: 100%; /* এটি 100% থাকবে */
+    
+    max-width: 420px;
+    min-height: 620px; 
+    
+    /* প্রথম ডিজাইন */
+    background-image: url('../images/redpacket.png'); 
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    display: flex; 
+    align-items: center;
+    transition: background-image 0.3s ease-in-out; 
+}
+
+/* দ্বিতীয় ডিজাইন */
+.red-packet-card.step-2-active {
+    background-image: url('../images/redpacket.png'); 
+}
+
+
+.claim-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 20px; 
+}
+
+/* ধাপ ১: "GO" বাটন স্ক্রিন */
+.logo-area {
+    width: 70px;
+    height: 70px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 18px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo-placeholder {
+    font-size: 40px;
+}
+.logo-area img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.sender-info {
+    font-size: 16px;
+    opacity: 0.8;
+    margin: 0 0 10px 0;
+    margin-top: 20px;
+}
+
+.message {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 0 0 40px 0;
+    min-height: 80px;
+}
+
+.go-button-wrapper {
+    margin: 20px 0;
+}
+.go-button {
+    background-color: #f0ead6; 
+    color: #d90000;
+    border: none;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+.go-button:hover {
+    transform: scale(1.05);
+}
+.go-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.go-button.spinning {
+    animation: spin 1s linear infinite;
+}
+
+/* ধাপ ২: ক্লেইম রেজাল্ট স্ক্রিন */
+.congrats-text {
+    font-size: 16px;
+    opacity: 0.8;
+    margin: 0;
+}
+.amount-display {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 10px 0 25px 0;
+}
+
+.result-area {
+    width: 100%;
+    margin-top: 15px;
+}
+.info-text {
+    font-size: 14px;
+    opacity: 0.9;
+    margin-bottom: 15px;
+}
+
+/* ফর্ম এবং কোড কপি স্টাইল */
+.claim-form, .code-copy-wrapper {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    /* *** সমাধান: এই লাইনটি যোগ করা হয়েছে *** */
+    flex-wrap: wrap; /* ছোট স্ক্রিনে বাটন নিচে নামবে */
+}
+.claim-form input, .code-copy-wrapper input {
+    flex-grow: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #fff;
+    color: #333;
+    min-width: 150px; /* ইনপুট বক্স যেন বেশি ছোট না হয়ে যায় */
+}
+.code-copy-wrapper input {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.btn-submit {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    background-color: #f0ead6;
+    color: #d90000;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+#final-message {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Helper Class */
+.hidden {
+    display: none;
+}
+
+/* Creator Report স্টাইল */
+.report-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #fff;
+}
+.report-list {
+    width: 100%;
+    text-align: left;
+    background-color: rgba(0, 0, 0, 0.15); 
+    border-radius: 8px;
+    padding: 10px 15px;
+    max-height: 240px; 
+    overflow-y: auto;
+}
+.report-entry {
+    padding: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 14px;
+    color: #f0ead6; 
+}
+.report-entry:last-child {
+    border-bottom: none;
+}
+.report-entry strong {
+    color: #fff; 
+    margin-right: 5px;
+}

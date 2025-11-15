@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Code Claim Packet - GrabRed</title>
+    <link rel="stylesheet" href="css/Handpicked.css">
+    <link rel="stylesheet" href="css/CodeClaim.css">
+    
+    <script src="js/auth.js" type="module" defer></script>
+</head>
+<body>
+
+    <header class="page-header">
+        <h2>Red Packet</h2>
+    </header>
+
+    <main>
+        <form id="create-packet-form">
+
+            <div class="card card-wide">
+                <h3>Token & Total Amount</h3>
+                <div class="token-amount-container">
+                    
+                    <div class="token-select-section">
+                        <label for="token-select">Select a token</label>
+                        <div class="token-input-wrapper">
+                            <div class="token-logo-placeholder">
+                                <img id="token-logo-img" src="" alt="Token Logo" style="display: none;">
+                            </div>
+                            <select id="token-select" required>
+                                <option value="" disabled selected>Choose token</option>
+                                <option value="usdt">USDT</option>
+                                <option value="usdc">USDC</option>
+                                <option value="btc">BTC</option>
+                                <option value="eth">ETH</option>
+                                <option value="bnb">BNB</option>
+                                <option value="sol">SOL</option>
+                                <option value="sui">SUI</option>
+                                <option value="apt">APT</option>
+                                <option value="xrp">XRP</option>
+                                <option value="doge">DOGE</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="amount-input-section">
+                        <label for="total-amount">Total amount</label>
+                        <div class="amount-input-wrapper">
+                            <input type="number" id="total-amount" placeholder="0.00" step="0.01" min="0">
+                            <span id="token-symbol-suffix"></span>
+                        </div>
+                        <small class="inline-note">Enter total amount to distribute (optional, for reference)</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>RedPacket Codes</h3>
+                <p class="inline-note" style="margin-top: 0; margin-bottom: 15px;">Add the codes and amounts you want to distribute.</p>
+
+                <div id="add-code-form-wrapper" class="add-code-form">
+                    <input type="text" id="packet-code-input" placeholder="Enter RedPacket code">
+                    <input type="number" id="packet-amount-input" placeholder="Amount" step="0.01" min="0">
+                    <button type="button" id="add-code-btn" class="btn btn-secondary">Add</button>
+                </div>
+
+                <div id="code-list-area" class="code-list-area">
+                    </div>
+            </div>
+
+            <div class="card">
+                <h3>Note (optional)</h3>
+                <label for="note" class="sr-only">Note (optional)</label>
+                <textarea id="note" 
+                          placeholder="Write a note or message for the RedPacket (optional)."></textarea>
+            </div>
+
+            <div class="button-container">
+                <button type="submit" id="generate-btn" class="btn btn-primary" disabled>Generate</button>
+            </div>
+
+        </form>
+
+        <div id="success-message" class="card" style="display: none;">
+            <h3>RedPacket generated</h3>
+            <p>Share this link with your community to let them claim:</p>
+            <div class="share-link-wrapper">
+                <input type="text" id="generated-link" readonly>
+                <button type="button" id="copy-link-btn" class="btn btn-secondary">Copy</button>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="js/CodeClaim.js" type="module"></script>
+</body>
+</html>

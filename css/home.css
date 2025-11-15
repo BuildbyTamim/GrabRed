@@ -1,0 +1,222 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header Section */
+.header-section {
+    background-color: #FFF;
+    border-bottom: 1px solid #eee;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+.header-content {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.logo-placeholder {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+}
+.logo-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+    border-radius: 8px; 
+}
+.project-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Red Packet Type Section */
+.red-packet-type-section {
+    margin-top: 30px;
+}
+.section-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+.card {
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 180px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+.card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.card-logo-placeholder {
+    width: 45px;
+    height: 45px;
+    margin-right: 15px;
+}
+.card-logo-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+    border-radius: 8px; 
+}
+.card-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+}
+.card-description {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+.small-icon {
+    margin-right: 8px;
+    display: flex; 
+    align-items: center;
+}
+.small-icon img {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+}
+.card-description p { margin: 0; }
+.card-footer { text-align: right; }
+.card-footer a { text-decoration: none; }
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.btn-create {
+    background-color: #FF0000;
+    color: #FFFFFF;
+}
+.btn-create:hover { background-color: #D90000; }
+
+/* === নতুন হিস্টোরি সেকশনের স্টাইল === */
+.history-section {
+    margin-top: 40px;
+}
+.history-content {
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 20px;
+    min-height: 100px;
+}
+
+.loading-text {
+    text-align: center;
+    color: #888;
+    font-size: 16px;
+}
+.loading-text.error {
+    color: #D90000;
+}
+
+/* নতুন কার্ড ডিজাইন */
+.history-card {
+    background-color: #fff;
+    border: 1px solid #e9e9e9;
+    border-radius: 10px;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+}
+
+.card-left {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.history-type {
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+}
+.history-status {
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 20px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+/* স্ট্যাটাস অনুযায়ী ভিন্ন রঙ */
+.status-not-claimed {
+    background-color: #888; /* ধূসর */
+}
+.status-in-progress {
+    background-color: #007bff; /* নীল */
+}
+.status-all-claimed {
+    background-color: #dc3545; /* লাল */
+}
+
+.card-middle {
+    text-align: center;
+}
+.remaining-count {
+    font-size: 24px;
+    font-weight: bold;
+    color: #FF0000;
+}
+.remaining-label {
+    display: block;
+    font-size: 12px;
+    color: #666;
+}
+
+.card-right {
+    /* 'View' বাটন ডানে থাকবে */
+}
+.btn-view {
+    background-color: #e0e0e0;
+    color: #333;
+    padding: 8px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+}
+.btn-view:hover {
+    background-color: #cccccc;
+}
+/* === হিস্টোরি সেকশনের স্টাইল শেষ === */

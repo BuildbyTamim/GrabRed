@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claim Red Packet - GrabRed</title>
+    <link rel="stylesheet" href="css/ClaimPage.css">
+</head>
+<body>
+
+    <main class="claim-container">
+        
+        <div id="red-packet-card" class="red-packet-card hidden">
+
+            <div id="claim-step-1" class="claim-step">
+                
+                <p id="sender-info" class="sender-info"></p>
+                <h2 id="message" class="message"></h2>
+                
+                <div class="go-button-wrapper">
+                    <button id="go-button" class="go-button">GO</button>
+                </div>
+            </div>
+
+            <div id="claim-step-2" class="claim-step hidden">
+                
+                <p class="congrats-text">Congratulations on getting</p>
+                
+                <div class="logo-area" id="token-logo-result">
+                    </div>
+                <h1 id="amount-display" class="amount-display"></h1>
+
+                <div id="handpicked-result" class="result-area hidden">
+                    <p class="info-text">Please submit your info to receive the reward. The creator (<span id="creator-contact-info"></span>) will contact you.</p>
+                    <form id="submit-address-form" class="claim-form">
+                        <input type="text" id="evm-address" placeholder="Enter EVM Address or Binance UID" required>
+                        <button type="submit" class="btn-submit">Submit</button>
+                    </form>
+                </div>
+
+                <div id="codeclaim-result" class="result-area hidden">
+                    <p class="info-text">Copy the code quickly to redeem:</p>
+                    <div class="code-copy-wrapper">
+                        <input type="text" id="code-to-copy" readonly>
+                        <button type="button" id="copy-code-btn" class="btn-submit">Copy</button>
+                    </div>
+                </div>
+                
+                <div id="final-message" class="result-area hidden">
+                     </div>
+                
+                <div id="creator-report" class="result-area hidden">
+                    <h3 class="report-title">Claim Report</h3>
+                    <div id="report-list" class="report-list">
+                        </div>
+                </div>
+                </div>
+        </div>
+
+        <div id="system-message" class="system-message">
+            <p>Loading Red Packet...</p>
+        </div>
+
+    </main>
+
+    <footer class="page-footer">
+        <p>Build By Tamim</p>
+    </footer>
+
+    <script src="js/ClaimPage.js" type="module"></script>
+</body>
+</html>

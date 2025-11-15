@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Handpicked Packet - GrabRed</title>
+    <link rel="stylesheet" href="css/Handpicked.css">
+    
+    <script src="js/auth.js" type="module" defer></script>
+</head>
+<body>
+
+    <header class="page-header">
+        <h2>Red Packet</h2>
+    </header>
+
+    <main>
+        <form id="create-packet-form">
+
+            <div class="card">
+                <h3>Contact Info</h3>
+                <label for="contact-info" class="sr-only">Contact Info</label>
+                <textarea id="contact-info" 
+                          placeholder="Enter contact information (wallet address, email or Telegram)..."></textarea>
+            </div>
+
+            <div class="card card-wide">
+                <div class="token-amount-container">
+                    
+                    <div class="token-select-section">
+                        <label for="token-select">Select a token</label>
+                        <div class="token-input-wrapper">
+                            <div class="token-logo-placeholder">
+                                <img id="token-logo-img" src="" alt="Token Logo" style="display: none;">
+                            </div>
+                            <select id="token-select" required>
+                                <option value="" disabled selected>Choose token</option>
+                                <option value="usdt">USDT</option>
+                                <option value="usdc">USDC</option>
+                                <option value="btc">BTC</option>
+                                <option value="eth">ETH</option>
+                                <option value="bnb">BNB</option>
+                                <option value="sol">SOL</option>
+                                <option value="sui">SUI</option>
+                                <option value="apt">APT</option>
+                                <option value="xrp">XRP</option>
+                                <option value="doge">DOGE</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="amount-input-section">
+                        <label for="total-amount">Total amount</label>
+                        <div class="amount-input-wrapper">
+                            <input type="number" id="total-amount" placeholder="0.00" step="0.01" min="0" required>
+                            <span id="token-symbol-suffix"></span>
+                        </div>
+                        <small class="inline-note">Enter total amount to distribute</small>
+                    </div>
+
+                </div>
+                <div id="amount-error" class="error-message"></div>
+            </div>
+
+            <div class="card">
+                <h3>Recipient</h3>
+                <label for="recipient-count">Number of recipients</label>
+                <input type="number" id="recipient-count" placeholder="e.g., 10" min="1" step="1" required>
+                <small class="inline-note">How many recipients can claim this RedPacket?</small>
+                <div id="recipient-error" class="error-message"></div>
+            </div>
+
+            <div class="card">
+                <h3>Distribution</h3>
+                <div class="distribution-options">
+                    <div class="option">
+                        <input type="radio" id="dist-random" name="distribution" value="random" checked>
+                        <label for="dist-random">
+                            <strong>Random amount</strong>
+                            <small>Distribute the total amount randomly among recipients.</small>
+                        </label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="dist-equal" name="distribution" value="equal">
+                        <label for="dist-equal">
+                            <strong>Equal amount</strong>
+                            <small>Distribute the total amount equally among recipients.</small>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Note (optional)</h3>
+                <label for="note" class="sr-only">Note (optional)</label>
+                <textarea id="note" 
+                          placeholder="Write a note or message for the RedPacket (optional)."></textarea>
+            </div>
+
+            <div class="button-container">
+                <button type="submit" id="generate-btn" class="btn btn-primary" disabled>Generate</button>
+            </div>
+
+        </form>
+
+        <div id="success-message" class="card" style="display: none;">
+            <h3>RedPacket generated</h3>
+            <p>Share this link with your community to let them claim:</p>
+            <div class="share-link-wrapper">
+                <input type="text" id="generated-link" readonly>
+                <button type="button" id="copy-link-btn" class="btn btn-secondary">Copy</button>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="js/handpicked.js" type="module"></script>
+</body>
+</html>

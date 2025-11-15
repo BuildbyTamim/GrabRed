@@ -1,0 +1,235 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* 2. Header */
+.page-header {
+    text-align: center; /* অথবা left */
+    padding: 10px 20px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 30px;
+}
+
+.page-header h2 {
+    margin: 0;
+    font-weight: 600;
+}
+
+/* 3. Card Layout */
+.card {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #f0f0f0;
+}
+
+.card h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+/* Form Elements */
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+/* Screen-reader only label */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+input[type="number"],
+input[type="text"],
+textarea,
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box; /* Important for padding */
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.inline-note {
+    font-size: 13px;
+    color: #666;
+    margin-top: 8px;
+    display: block;
+}
+
+/* 5. Card 2 - Token & Amount */
+.token-amount-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.token-select-section,
+.amount-input-section {
+    flex: 1;
+    min-width: 200px;
+}
+
+.token-input-wrapper {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.token-input-wrapper select {
+    border: none;
+    flex-grow: 1;
+}
+
+.token-logo-placeholder {
+    width: 40px;
+    height: 40px;
+    background-color: #f0f0f0; /* যদি ছবি লোড না হয় */
+    border-radius: 50%;
+    margin: 0 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+/* এই স্টাইলটি আপনার লোগোকে গোলাকার ও ফিট রাখবে */
+.token-logo-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ছবিটি পুরো গোলক জুড়ে থাকবে */
+    border-radius: 50%;
+}
+
+
+.amount-input-wrapper {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding-right: 12px;
+}
+
+.amount-input-wrapper input {
+    border: none;
+    flex-grow: 1;
+}
+
+#token-symbol-suffix {
+    font-weight: bold;
+    color: #555;
+}
+
+/* 7. Card 4 - Distribution */
+.distribution-options .option {
+    display: flex;
+    align-items: flex-start;
+    padding: 12px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+.distribution-options .option input[type="radio"] {
+    width: auto;
+    margin-top: 4px;
+    margin-right: 12px;
+}
+.distribution-options .option label {
+    margin-bottom: 0;
+    font-weight: normal;
+}
+.distribution-options .option label strong {
+    display: block;
+    font-weight: 600;
+    color: #333;
+}
+.distribution-options .option label small {
+    font-size: 13px;
+    color: #666;
+}
+
+/* 9. Generate Button */
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+    padding-bottom: 50px; /* Extra white space at bottom */
+}
+
+.btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #FF0000;
+    color: #FFFFFF;
+}
+.btn-primary:hover {
+    background-color: #D90000;
+}
+.btn-primary:disabled {
+    background-color: #f0f0f0;
+    color: #aaa;
+    cursor: not-allowed;
+}
+
+.btn-secondary {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+/* 10. Success Message */
+#success-message h3 {
+    color: #008000; /* Green */
+}
+.share-link-wrapper {
+    display: flex;
+    gap: 10px;
+}
+.share-link-wrapper input {
+    flex-grow: 1;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Error Messages */
+.error-message {
+    color: #D90000;
+    font-size: 13px;
+    margin-top: 5px;
+}
